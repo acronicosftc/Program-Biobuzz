@@ -870,5 +870,3 @@ import org.firstinspires.ftc.robotcore.external.navigation.YawPitchRollAngles;
 
         Estado_gamepad1_x_anterior = Estado_gamepad1_x;
         Estado_gamepad1_b_anterior = Estado_gamepad1_b;
-
-    }

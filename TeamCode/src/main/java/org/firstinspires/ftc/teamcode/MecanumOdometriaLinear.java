@@ -19,10 +19,10 @@ public class MecanumOdometriaLinear extends LinearOpMode {
     @Override
     public void runOpMode() {
         // 1. Mapeamento dos motores no hardwareMap
-        frontLeft  = hardwareMap.get(DcMotor.class, "esquerdo_f");
-        backLeft   = hardwareMap.get(DcMotor.class, "esquerdo_t");
-        frontRight = hardwareMap.get(DcMotor.class, "direito_f");
-        backRight  = hardwareMap.get(DcMotor.class, "direito_t");
+        esquerdo_f  = hardwareMap.get(DcMotor.class, "esquerdo_f");
+        esquerdo_t   = hardwareMap.get(DcMotor.class, "esquerdo_t");
+        direito_f = hardwareMap.get(DcMotor.class, "direito_f");
+        direito_t = hardwareMap.get(DcMotor.class, "direito_t");
 
         // Inversão do lado esquerdo para alinhar a polaridade de tração para frente
         frontLeft.setDirection(DcMotor.Direction.REVERSE);
@@ -80,10 +80,10 @@ public class MecanumOdometriaLinear extends LinearOpMode {
             powerBackRight  /= maxPower;
         }
 
-        frontLeft.setPower(powerFrontLeft);
-        backLeft.setPower(powerBackLeft);
-        frontRight.setPower(powerFrontRight);
-        backRight.setPower(powerBackRight);
+        esquerdo_f.setPower(powerFrontLeft);
+        esquerdo_t.setPower(powerBackLeft);
+        direito_f.setPower(powerFrontRight);
+        direito_t.setPower(powerBackRight);
     }
 
     /**
